@@ -1,0 +1,4 @@
+version=3
+
+ https://github.com/urfave/cli/releases \
+ .*/archive/v?(\d[-\d\.]+)\.tar\.gz

@@ -1,0 +1,24 @@
+Source: golang-github-urfave-cli
+Section: devel
+Priority: optional
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>
+Build-Depends: debhelper (>= 10),
+               dh-golang,
+               golang-any,
+               golang-gopkg-yaml.v2-dev
+Standards-Version: 4.1.0
+Homepage: https://github.com/urfave/cli
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-urfave-cli.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-urfave-cli.git
+XS-Go-Import-Path: github.com/urfave/cli
+
+Package: golang-github-urfave-cli-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-gopkg-yaml.v2-dev
+Description: package for building command line apps in Go
+ "Cli" is a simple, fast, and fun package for building command line apps
+ in Go. The goal is to enable developers to write fast and distributable
+ command line applications in an expressive way.
