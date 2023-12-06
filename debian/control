@@ -1,23 +1,27 @@
 Source: golang-github-urfave-cli
-Section: devel
+Section: golang
 Priority: optional
-Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
-Uploaders: Dmitry Smirnov <onlyjob@debian.org>
-Build-Depends: debhelper (>= 10),
-               dh-golang,
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-golang,
                golang-any,
-               golang-gopkg-yaml.v2-dev
-Standards-Version: 4.1.0
+               golang-github-cpuguy83-go-md2man-v2-dev (>= 2.0.1~),
+               golang-github-stretchr-testify-dev,
+Testsuite: autopkgtest-pkg-go
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-urfave-cli
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-urfave-cli.git
 Homepage: https://github.com/urfave/cli
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-urfave-cli.git
-Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-urfave-cli.git
 XS-Go-Import-Path: github.com/urfave/cli
 
 Package: golang-github-urfave-cli-dev
 Architecture: all
-Depends: ${shlibs:Depends},
+Multi-Arch: foreign
+Depends: golang-github-cpuguy83-go-md2man-v2-dev (>= 2.0.1~),
          ${misc:Depends},
-         golang-gopkg-yaml.v2-dev
+Breaks: golang-github-mendersoftware-mender-artifact-dev (<< 3.4.0-2),
 Description: package for building command line apps in Go
  "Cli" is a simple, fast, and fun package for building command line apps
  in Go. The goal is to enable developers to write fast and distributable

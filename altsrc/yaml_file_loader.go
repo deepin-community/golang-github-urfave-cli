@@ -1,8 +1,3 @@
-// Disabling building of yaml support in cases where golang is 1.0 or 1.1
-// as the encoding library is not implemented or supported.
-
-// +build go1.2
-
 package altsrc
 
 import (
@@ -14,7 +9,7 @@ import (
 	"runtime"
 	"strings"
 
-	"gopkg.in/urfave/cli.v1"
+	"github.com/urfave/cli"
 
 	"gopkg.in/yaml.v2"
 )
@@ -86,7 +81,7 @@ func loadDataFrom(filePath string) ([]byte, error) {
 			return nil, fmt.Errorf("Cannot read from file: '%s' because it does not exist.", filePath)
 		}
 		return ioutil.ReadFile(filePath)
-	} else {
-		return nil, fmt.Errorf("unable to determine how to load from path %s", filePath)
 	}
+
+	return nil, fmt.Errorf("unable to determine how to load from path %s", filePath)
 }

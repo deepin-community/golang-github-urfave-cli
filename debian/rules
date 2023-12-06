@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
-export DH_GOLANG_EXCLUDES := cli/altsrc
+export DH_GOLANG_EXCLUDES := altsrc
+export DH_GOLANG_INSTALL_EXTRA := autocomplete
 
 %:
-	dh $@ --buildsystem=golang --with=golang
+	dh $@ --buildsystem=golang

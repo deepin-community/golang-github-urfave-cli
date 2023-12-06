@@ -1,8 +1,3 @@
-// Disabling building of toml support in cases where golang is 1.0 or 1.1
-// as the encoding library is not implemented or supported.
-
-// +build go1.2
-
 package altsrc
 
 import (
@@ -11,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"gopkg.in/urfave/cli.v1"
+	"github.com/urfave/cli"
 )
 
 func TestCommandTomFileTest(t *testing.T) {
