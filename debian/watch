@@ -1,4 +1,4 @@
-version=3
-
- https://github.com/urfave/cli/releases \
- .*/archive/v?(\d[-\d\.]+)\.tar\.gz
+version=4
+opts="mode=git, pgpmode=none" \
+  https://github.com/urfave/cli \
+  refs/tags/v?(1\.\d\S*) debian

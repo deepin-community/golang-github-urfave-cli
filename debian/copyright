@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: cli
 Source: https://github.com/urfave/cli
+Upstream-Name: cli
 
 Files: *
 Copyright: 2013-2017 Jeremy Saenz & Contributors
