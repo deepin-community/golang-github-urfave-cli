@@ -1,0 +1,12 @@
+Index: golang-github-urfave-cli/docs_test.go
+===================================================================
+--- golang-github-urfave-cli.orig/docs_test.go
++++ golang-github-urfave-cli/docs_test.go
+@@ -48,6 +48,7 @@ func TestToMarkdownNoCommands(t *testing
+ }
+ 
+ func TestToMan(t *testing.T) {
++	t.Skip("Debian-local: dependant on output of go-md2man")
+ 	// Given
+ 	app := testApp()
+ 
